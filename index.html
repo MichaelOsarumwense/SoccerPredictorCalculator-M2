@@ -12,24 +12,24 @@
 <body>
 <div style="padding-right: 0px;
     padding-left: 0px;" class="container-fluid navalert-container">
-   <nav class="navbar navbar-dark navbar-expand-sm" id="navbar">SOCCER PREDICTOR CALCULATOR</nav>
+<header>
+    <nav id="nav-bar">
+    <h2 id="logo">Soccer Predictor Calculator</h2>
+    <button id="mail">Email Result</button>
+    </nav>
+</header>
   </div>
  <div class="container-fluid landing-container">
-  <div class="row">
-<div class="col-12">
-
-</div>
-  </div>
   </div>
   <section id="team-Infos">
 <h2 id="question">What Are The Chances?</h2>
 <div id="left-about">
   <div class="left-about-heading">
-    <h2>Select Your Team <i class="fas fa-futbol"></i></h2>
+    <h2>Your Team <i class="fas fa-futbol"></i></h2>
     <hr>
-<label for="cars">:</label>
+<label for="Your-Team">:</label>
 <select id="myTeam" name="cars">
-  <option disabled selected value>Teams</option>
+  <option disabled selected value>Select Team</option>
   <option value="Barcelona">Barcelona</option>
   <option value="Bayernmunich">Bayernmunich</option>
   <option value="Juventus">Juventus</option>
@@ -43,12 +43,12 @@
 </div>
 <div id="right-about">
  <div class="right-about-heading">
-    <h2>Select X Team <i class="far fa-futbol"></i></h2>
+    <h2>Rival Team <i class="far fa-futbol"></i></h2>
     <hr>
     <div style="text-align:right">
-        <label for="cars">:</label>
+        <label for="opposing-Team">:</label>
 <select id="oppTeam" name="oppTeam">
-  <option disabled selected value>Teams</option>
+  <option disabled selected value>Select Team</option>
   <option value="Barcelona">Barcelona</option>
   <option value="Bayernmunich">Bayernmunich</option>
   <option value="Juventus">Juventus</option>
@@ -56,32 +56,32 @@
   </div>
       </div>
   <div class="right-about-heading">
-    <h2>X - Chances</h2>
+    <h2>Rival Chances</h2>
        <hr>
     <h3 id="opp-Chances"></h3>
   </div>
 </div>
 
-<div id="center-about">
+<div class="d-none d-md-block" id="center-about">
 <div id="circle-container">
   <div id ="circle-cover-bg"></div>
 </div>
 </div>
-<div class="button-container-div"><button style="border-radius: 25px;">Calculate</button></div>
 </section>
+<div class="button-container-div"><button style="border-radius: 25px;">Calculate</button></div>
 </body>
 <footer class="container-fluid">
          <div id="footer-details" class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <p class="inline-block">
                </p>
            </div>
-             <div class="col-sm-4">
+             <div class="col-md-4">
             <p class="inline-block">
                &copy; Soccer Predictor Calculator
             </p>
            </div>
-           <div class="col-sm-4">
+           <div class="col-md-4">
       <p class="inline-block">
                </p>
         </div>
