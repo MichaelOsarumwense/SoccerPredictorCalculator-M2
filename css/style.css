@@ -1,156 +1,246 @@
-
 /* container */
 .landing-container {
-  height: 600px;
-    width: 100%;
-    /*no-repeat bottom right fixed*/
-    background: url('https://thumblr.uniid.it/blog_component/97847/f963abb3d137.jpg')no-repeat bottom right fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  height: 700px;
+  width: 100%;
+  /*no-repeat bottom right fixed*/
+  background: url("images/1.jpg")
+    no-repeat bottom right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .navalert-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    padding-left: 0;
-    padding-right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* navbar */
-.navbar {
-    margin-bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    border: 0;
-    color: white;
-    height: 75px;
-
-
-}
-.navbar-dark .navbar-text {
-    color: white;
+#nav-bar {
+  margin-bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  color: white;
+  height: 75px;
+  font-weight: bold;
 }
 
-.navbar .navbar-brand {
-    font-weight: bold;
+#mail {
+  float: right;
+  margin-right: 30px;
+  margin-top: 15px;
+  border: 0px;
+  border-radius: 55px;
+}
+
+#logo {
+  float: left;
+  margin-top: 15px;
+  margin-left: 30px;
 }
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, .9);
-    color: #fafafa;
-    min-height: 60px;
-    margin: bottom;
-    text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fafafa;
+  min-height: 60px;
+  margin: bottom;
+  text-align: center;
 }
 
-footer p{
-margin-top: 15px;
+footer p {
+  margin-top: 15px;
+  text-align: center;
 }
 
 /* teams */
-#team-Infos{
-  height:600px;
+#team-Infos {
+  height: 600px;
+  margin-bottom: -50px;
 }
 
-#left-about{
+#left-about {
   padding-top: 30px;
-   width:33%;
-   float:left;
+  width: 33%;
+  float: left;
 }
 
-#right-about{
+#right-about {
   padding-top: 30px;
-   width:33%;
-   float:right;
-
+  width: 33%;
+  float: right;
 }
 
-#center-about{
+#center-about {
   padding-top: 30px;
-   width:33%;
-  margin:0 auto;
+  width: 33%;
+  margin: 0 auto;
 }
 
-hr{
-  border-top:1px solid #777777;
-  width:100%;
-  margin:5px 0;
+hr {
+  border-top: 1px solid #777777;
+  width: 100%;
+  margin: 5px 0;
 }
 
-.left-about-heading{
-   width:50%;
-   float:right;
-   line-height:20px;
-   clear:both;
-   margin-bottom:50px;
+.left-about-heading {
+  width: 50%;
+  float: right;
+  line-height: 20px;
+  clear: both;
+  margin-bottom: 50px;
 }
 
-.right-about-heading{
-   width:50%;
-   float:left;
-   line-height:20px;
-   clear:both;
-   margin-bottom:50px;
+.right-about-heading {
+  width: 50%;
+  float: left;
+  line-height: 20px;
+  clear: both;
+  margin-bottom: 50px;
 }
 
-.right-about-heading h2{
-  text-align:right;
+.right-about-heading h2 {
+  text-align: right;
 }
 
-.right-about-heading p{
-  text-align:right;
+.right-about-heading p {
+  text-align: right;
 }
 
-#question{
-  margin:50px 0;
-  text-align:center;
+#question {
+  margin: 50px 0;
+  text-align: center;
   font-size: 280%;
 }
-#circle-container{
-  width:300px;
-  height:300px;
-  padding:30px;
-  border-style:solid;
-  border-color:#cccccc;
-  border-width:1px;
-  border-radius:50%;
-  margin:0 auto;
+#circle-container {
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
-#circle-cover-bg{
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIMrP6CFprzX8gqn_U9N2L-Jk4Yl2HLRR8Ew&usqp=CAU")no-repeat center center;
-  height:100%;
-  border-radius:50%;
+#circle-cover-bg {
+  background: url("images/2.jpg")
+    no-repeat center center;
+  height: 100%;
+  border-radius: 50%;
 }
 
-.button-container-div{
-text-align: center;
-margin-top: 30px;          
-}
-
-/* components */
-button{
-    border-radius: 15px;
-                background-color: crimson;
-            color: #fff;
-            border: 1px solid;
-            padding: 10px;
-            width: 120px;
-            outline: none;
-            margin: auto;
+.button-container-div {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 150px;
 }
 
 select {
-    background-color: #212529;
-    color: #fff;
+  background-color: #212529;
+  color: #fff;
+}
+
+select:hover {
+  cursor: pointer;
+}
+/* general components styling*/
+button {
+  border-radius: 15px;
+  background-color: crimson;
+  color: #fff;
+  border: 1px solid;
+  padding: 10px;
+  width: 120px;
+  outline: none;
+  margin: auto;
+}
+
+button:hover {
+  background-color: red;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    column-count: 1;
+    text-align: center;
+  }
+  #logo{
+      margin-top: auto;
+  }
+
+  #mail {
+    text-align: center;
+    float: none;
+    margin-left: 60px;
+  }
+
+  team-Infos {
+    column-count: 1;
+  }
+  button {
+    margin-bottom: bottom;
+  }
+
+  #left-about {
+    width: 10%;
+  }
+  #right-about {
+    width: 40%;
+  }
+
+  .landing-container {
+  height: 700px;
+  width: 100%;
+  /*no-repeat bottom right fixed*/
+  background: url("images/1.jpg")
+    no-repeat bottom right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  #circle-container {
+    border-style: none;
+    width: auto;
+  }
+  .landing-container {
+  height: 700px;
+  width: 100%;
+  /*no-repeat bottom right fixed*/
+  background: url("images/3.jpg")
+    no-repeat bottom right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 }
