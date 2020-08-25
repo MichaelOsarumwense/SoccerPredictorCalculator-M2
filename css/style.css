@@ -3,7 +3,7 @@
   height: 700px;
   width: 100%;
   /*no-repeat bottom right fixed*/
-  background: url("images/1.jpg")
+  background: url("/images/1.jpg")
     no-repeat bottom right fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -135,7 +135,7 @@ hr {
 }
 
 #circle-cover-bg {
-  background: url("images/2.jpg")
+  background: url("/images/2.jpg")
     no-repeat center center;
   height: 100%;
   border-radius: 50%;
@@ -165,7 +165,7 @@ button {
   color: #fff;
   border: 1px solid;
   padding: 10px;
-  width: 120px;
+  width:120px;
   outline: none;
   margin: auto;
 }
@@ -183,7 +183,7 @@ button:hover {
   #logo{
       margin-top: auto;
   }
-
+   
   #mail {
     text-align: center;
     float: none;
@@ -208,7 +208,7 @@ button:hover {
   height: 700px;
   width: 100%;
   /*no-repeat bottom right fixed*/
-  background: url("images/1.jpg")
+  background: url("/images/1.jpg")
     no-repeat bottom right fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -220,7 +220,13 @@ button:hover {
   justify-content: center;
   position: relative;
 }
+button {
 
+  width: -webkit-fill-available;
+}
+h5{
+    width: 75px;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -233,7 +239,7 @@ button:hover {
   height: 700px;
   width: 100%;
   /*no-repeat bottom right fixed*/
-  background: url("images/3.jpg")
+  background: url("/images/3.jpg")
     no-repeat bottom right fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
