@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-       <link rel="stylesheet" href="libraries/bootstrap/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="libraries/bootstrap/bootstrap.min.css" type="text/css" />
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_LyBtMTV12UHRTTnpoVGVz");
+        })();
+    </script>
 </head>
 <body>
 <div style="padding-right: 0px;
@@ -15,7 +22,7 @@
 <header>
     <nav id="nav-bar">
     <h2 id="logo">Soccer Predictor Calculator</h2>
-    <button id="mail">Email Result</button>
+    <button id="mail" onclick="openForm()">Share App</button>
     </nav>
 </header>
   </div>
@@ -38,7 +45,7 @@
   <div class="left-about-heading">
     <h2>Your Chances</h2>
        <hr>
-    <h5 id="my-Chances"></h5>
+    <h5 name="my_chances" id="my_Chances"></h5>
   </div>
 </div>
 <div id="right-about">
@@ -58,7 +65,7 @@
   <div class="right-about-heading">
     <h2>Rival Chances</h2>
        <hr>
-    <h5 id="opp-Chances"></h5>
+    <h5 name="opp-Chances" id="opp_Chances"></h5>
   </div>
 </div>
 
@@ -86,6 +93,20 @@
                </p>
         </div>
          </div>
+         <!-- The Modal -->
+
+<div class="form-popup" id="myForm">
+  <form  name="contact-form" class="form-container" onsubmit="return sendMail(this);" >
+    <h3>Tell A Friend <i class="far fa-laugh-wink"></i></h3>
+
+    <input type="text" placeholder="Friend's Email" name="email" required>
+    <input type="text" placeholder="Friend's Name" name="name" required>
+    <input type="text" value="https://www.google.com" name="message">
+
+    <button type="submit" class="btn">Share</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
      </footer>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
