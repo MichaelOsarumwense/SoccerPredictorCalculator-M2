@@ -58,13 +58,13 @@ function CalculateChances() {
     } else {
       $("#my_Chances").text("It is a Tie");
       $("#opp_Chances").text("It is a Tie");
-      $("#circle-cover-bg").css("background-image", "url('/static/images/2.jpg')");
+      $("#circle-cover-bg").css("background-image", "url('/static/images/draws.jpg')");
     }
   }
   if (myTeam === oppTeam && oppTeam !== "" && myTeam !== "") {
     $("#my_Chances").text("It is a Tie");
     $("#opp_Chances").text("It is a Tie");
-    $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
+    $("#circle-cover-bg").css("background-image", "url('/static/images/draw.jpg')");
   }
 }
 //Calculate chances

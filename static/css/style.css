@@ -29,7 +29,7 @@
 #nav-bar {
   margin-bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   border: 0;
   color: white;
   height: 75px;
@@ -174,12 +174,26 @@ button:hover {
   background-color: red;
 }
 
+/* sticky */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    .sticky {
+    position: relative;
+    top: 0;
+    width: 100%
+  }
+  
   header {
     column-count: 1;
     text-align: center;
   }
+
   #logo{
       margin-top: auto;
   }
@@ -324,9 +338,3 @@ h5{
   opacity: 1;
 }
 
-/* sticky */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
