@@ -8,8 +8,6 @@ Chances are calculated on the basis of games won, games lost, goals scored and g
 
 The user experience is simple and easy to navigate. Soccer Predictor calculator is a one page application with four sections, background image, header with logo and a button to share the application, a section to select teams and calculate chances and finally the footer containing the copy right.
 
-On the Footer the user is able to navigate to a section that reveals the variables by which the teams chances are calculated.
-
 *User stories include:*
 <ul>
 <li>As a user i will like to have a landing/home page.</li>
@@ -17,8 +15,10 @@ On the Footer the user is able to navigate to a section that reveals the variabl
 <li>As a user i will like to be able to select from a drop down of teams.</li>
 <li>As a user i will like to be able to be able to see the chances of selected teams by clicking calculate</li>
 <li>As a user i will like the center image to change to the logo of the winning team when i click calculate</li>
-<li>As a user if i select the same team on both side i will like the center image to reflect the selected team logo and display its a tie</li>
-<li>As a user i will like to have a link on the footer that navigates me to the variable inputs used in calculaing chances.</li>
+<li>As a user if i select the same team on both side i will like the center image to change irrespective and display its a tie</li>
+<li>As a user if the result of my chances is a Tie from two different teams then i want the center image to show equal scores</li>
+<li>As a user i will like to be prompted to select teams if i click calculate without selecting teams for both own and rival.</li>
+
 </ul>
 
 **As a basic layout <a href="WireFrame/M2Wireframe.PNG" target="_blank">here is a link </a> to the wireFrame and Mock up used in creating Ready food restaurant.**
@@ -28,8 +28,10 @@ On the Footer the user is able to navigate to a section that reveals the variabl
 ### Existing Features
 <ul>ce.
 <li>Team Select: The application has a select drop down where a user can select own and rival teams</li>
-<li>Center Image: The Center image displays helps visualize the outcome by displaying the image or logo of the winning team</li>
+<li>Calculate Chabce: The application allows users to predict chances of winnng selecting teams and clicking calculate</li>
+<li>Center Image: The Center image helps visualize the outcome by displaying the image or logo of the winning team</li>
 <li>Loader: The loader feature is displayed on the result field of each team until a calculation takes place</li>
+<li>Share App: The Application has a share button that allows user share the application with friends.</li>
 </ul>
 
 ### Features Left to Implement
@@ -41,9 +43,10 @@ On the Footer the user is able to navigate to a section that reveals the variabl
 <ul>
 <li>HTML5</li>
 <li>CSS3</li>
+<li>Javascript: The Project uses javascript to make the application interactive as well as to define busines logic</li>
 <li>JQuery: The project uses JQuery to simplify DOM manipulation.</li>
 <li>Bootstrap: Bootstrap was used to implement stylings and create reuseable components.</li>
-<li>Heroku</li>
+<li>Heroku: The Project uses Heroku for deployment</li>
 <li>Flask</li>
 
 
@@ -57,17 +60,17 @@ user journies and scenarios required to navigate through the entire site. While 
 <ul>
 <h3>Scenarios</h3>
 <li>Calculate Chances: Navigate to team selections, select own and rival teams and click calculate. </li>
-<li>See Chances: Chances for own and rival team are displayed Your-Rival chances fields.</li>
-<li>Center Image Change: The image on the center image changes to the logo of the team with the best chance</li>
-<li>Share App: On the header navigate to share app and clcik on button, fill in name and email and click semnd</li>
-<li>See Chances Statistics: Navigate to footer click on Chances statistics and modal is displayed showing how chances were calculated</li>
+<li>See Chances: Chances for own and rival team should be displayed on **Your Chances** and **Rival Chances** fields upon clicking caluclate.</li>
+<li>Center Image Change: The image on the center image changes to the logo of the team with the best chance upon clicking calculate.</li>
+<li>Share App: On the header navigate to share app and clcik on button, fill in name and email and click send</li>
+<li>Responsiveness: UX is responsive on small and medium devices like mobile phones and tablets.</li>
 </ul>
 
 
 ### **Bugs**
 <ul>
-<li>Fixed bug with the business logic where chances were not being calculated if selected teams had equal stats.</li>
-<li>Fixed a bug where images were not displaying across all pages due to wrong href.</li>
+<li>Fixed bug with the business logic where chances were not being calculated if the selected teams had equal stats.</li>
+<li>Fixed a bug where images were not displaying across all pages due to moving the images folder into static directory.</li>
 </ul>
 
 ## **Deployment**
