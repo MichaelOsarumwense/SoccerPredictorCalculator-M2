@@ -138,7 +138,7 @@ $(document).ready(function() {
 });
 
 function clearValue() {
-    currentQuery = "";
+    currentQuery = `<img src="/static/images/loader2.gif" alt="waiting..." />`;
     var t1 = document.getElementById("my_Chances").innerHTML = currentQuery;
   var t2 = document.getElementById("opp_Chances").innerHTML = currentQuery;
 }
