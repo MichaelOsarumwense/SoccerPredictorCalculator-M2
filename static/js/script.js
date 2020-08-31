@@ -100,7 +100,7 @@ function sendMail(contactForm) {
             console.log("SUCCESS", response);
               frm = document.getElementsByName('contact-form')[0]
             frm.reset();
-            return alert('Thanks for contacting us, we will be with you shortly.');
+            return alert('Thanks for sharing.');
         },
         function(error) {
             console.log("FAILED", error);
