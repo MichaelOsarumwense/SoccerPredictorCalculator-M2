@@ -7,8 +7,8 @@ function CalculateChances() {
   var Teams = [
     {
       name: "Barcelona",
-      gamesWon: 1,
-      gamesLost: 1,
+      gamesWon: 3,
+      gamesLost: 2,
       goalsScored: 9,
       goalsReceived: 2,
       url: "/static/images/barcelona.jpg",
@@ -23,9 +23,9 @@ function CalculateChances() {
     },
     {
       name: "Juventus",
-    gamesWon: 5,
-      gamesLost: 0,
-      goalsScored: 5,
+    gamesWon: 3,
+      gamesLost: 1,
+      goalsScored: 4,
       goalsReceived: 0,
       url: "/static/images/Juventus.jpg",
     },
@@ -64,7 +64,7 @@ function CalculateChances() {
   if (myTeam === oppTeam && oppTeam !== "" && myTeam !== "") {
     $("#my_Chances").text("It is a Tie");
     $("#opp_Chances").text("It is a Tie");
-    $("#circle-cover-bg").css("background-image", "url('/static/images/draw.jpg')");
+    $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
   }
 }
 //Calculate chances

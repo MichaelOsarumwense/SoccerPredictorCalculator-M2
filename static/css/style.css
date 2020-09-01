@@ -143,6 +143,12 @@ hr {
 
 #opp_Chances{
     text-align: right;
+     font-size: large;
+      font-style: oblique;
+}
+#my_Chances{
+     font-size: large;
+     font-style: oblique;
 }
 
 .button-container-div {
