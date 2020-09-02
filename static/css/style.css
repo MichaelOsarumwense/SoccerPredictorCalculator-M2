@@ -16,38 +16,36 @@
   position: relative;
 }
 
-.navalert-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding-left: 0;
-  padding-right: 0;
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border: 0;
+    margin-right: 15px;
 }
 
 /* navbar */
-#nav-bar {
-  margin-bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  border: 0;
-  color: white;
-  height: 75px;
-  font-weight: bold;
+#shareButton{
+    border-radius: 10px;
+    color: white;
+    border: none;
+    outline:none;
 }
-
-#mail {
+.navbar-toggler {
+  border: none;
+  width: 1em;
   float: right;
-  margin-right: 30px;
-  margin-top: 15px;
-  border: 0px;
-  border-radius: 55px;
 }
 
-#logo {
-  float: left;
-  margin-top: 15px;
-  margin-left: 30px;
+.navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0,0,0,.7);
+}
+
+.navbar-custom .navbar-brand {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
 }
 
 /* Footer */
@@ -177,10 +175,6 @@ button {
   margin: auto;
 }
 
-button:hover {
-  background-color: red;
-}
-
 /* sticky */
 .sticky {
     position: fixed;
@@ -190,12 +184,6 @@ button:hover {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .sticky {
-    position: relative;
-    top: 0;
-    width: 100%
-  }
-
   #my_Chances{
     width: 72px;
 }
@@ -229,16 +217,16 @@ button:hover {
     width: 40%;
   }
 
-  .landing-container {
-  height: 700px;
+   .landing-container {
+  height: 450px;
   width: 100%;
   /*no-repeat bottom right fixed*/
-  background: url("/static/images/1.jpg")
-    no-repeat bottom right fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url("/static/images/3.jpg")
+ bottom right fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 
   display: flex;
   align-items: center;
@@ -261,15 +249,14 @@ h5{
     width: auto;
   }
   .landing-container {
-  height: 700px;
+  height: 450px;
   width: 100%;
   /*no-repeat bottom right fixed*/
-  background: url("/static/images/3.jpg")
-    no-repeat bottom right fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url("/static/images/3.jpg") bottom right fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 
   display: flex;
   align-items: center;
@@ -300,7 +287,7 @@ h5{
   top: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
-  z-index: 9;
+  z-index: 1031;
   color: #4c4343;
   
 }
