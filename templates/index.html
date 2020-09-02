@@ -7,22 +7,12 @@
       <meta name="keywords" content="Soccer, Predict, Calculator">
       <meta name="author" content="Michael Osarumwense">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"/>
       <link
-         rel="stylesheet"
-         href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-         crossorigin="anonymous"
-         />
-      <link
-         href="https://fonts.googleapis.com/css?family=Roboto:400,700"
-         rel="stylesheet"
-         />
-      <link rel="stylesheet" href="static/css/style.css" type="text/css" />
-      <link
-         rel="stylesheet"
-         href="static/libraries/bootstrap/bootstrap.min.css"
-         type="text/css"
-         />
+         href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"/>
+      <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
+      <link rel="stylesheet" href="static/libraries/bootstrap/bootstrap.min.css" type="text/css"/>
       <script
          type="text/javascript"
          src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"
@@ -39,10 +29,22 @@
          class="container-fluid navalert-container"
          >
          <header>
-            <nav id="nav-bar">
-               <h2 id="logo">Soccer Predictor Calculator</h2>
-               <button id="mail" onclick="openForm()">Share App</button>
-            </nav>
+         <!-- Navigation -->
+  <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Soccer Predictor</a>
+      <button type="button" class="navbar-toggler ml-auto hidden-sm-up float-xs-right" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button id="shareButton" class="nav-link" onclick="openForm()">Share App</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
          </header>
       </div>
       <div class="container-fluid landing-container"></div>
