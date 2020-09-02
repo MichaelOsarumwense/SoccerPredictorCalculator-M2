@@ -233,10 +233,14 @@ button {
   justify-content: center;
   position: relative;
 }
-button {
 
-  width: -webkit-fill-available;
+  #calculateButton {
+
+width: -webkit-fill-available;
+width: -moz-available;
+width: fill-available;
 }
+
 h5{
     width: 75px;
 }
@@ -263,7 +267,11 @@ h5{
   justify-content: center;
   position: relative;
 }
+  #calculateButton {
 
+width: -webkit-fill-available;
+width: -moz-available;
+width: fill-available;
 }
 
 /* Button used to open the contact form - fixed at the bottom of the page */
