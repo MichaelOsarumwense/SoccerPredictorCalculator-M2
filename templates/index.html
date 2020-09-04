@@ -7,16 +7,13 @@
       <meta name="keywords" content="Soccer, Predict, Calculator">
       <meta name="author" content="Michael Osarumwense">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"/>
       <link
          href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"/>
       <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
       <link rel="stylesheet" href="static/libraries/bootstrap/bootstrap.min.css" type="text/css"/>
-      <script
-         type="text/javascript"
-         src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"
-         ></script>
+      <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+
       <script type="text/javascript">
          (function () {
            emailjs.init("user_LyBtMTV12UHRTTnpoVGVz");
@@ -39,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <button id="shareButton" class="nav-link" onclick="openForm()">Share App</button>
+            <button id="shareButton">Share App</button>
           </li>
         </ul>
       </div>
@@ -49,7 +46,8 @@
       </div>
       <div class="container-fluid landing-container"></div>
       <section id="team-Infos">
-         <h2 id="question">What Are The Chances?</h2>
+         <h2 id="question">Predict A Game!</h2>
+         <p id="chance-info">Chances are calculated on the basis of Games-Won, Games-Lost, Goals-Scored & Goals-Recieved.</p>
          <div id="left-about">
             <div class="left-about-heading">
                <h2>Your Team <i class="fas fa-futbol"></i></h2>
@@ -105,6 +103,17 @@
       <div id="calculate" class="button-container-div">
          <button id="calculateButton" style="border-radius: 25px;">Calculate</button>
       </div>
+      <!-- The Modal -->
+      <div class="form-popup" id="myForm">
+         <form name="contact-form" class="form-container" onsubmit="return sendMail(this);">
+            <h3>Tell A Friend <i class="far fa-laugh-wink"></i></h3>
+            <input type="text" placeholder="Friend's Email" id="email" name="email" required />
+            <input type="text" placeholder="Friend's Name" id="name" name="name" required />
+            <input type="text" value="https://soccerpredictorcalculator-m2.herokuapp.com/" name="message"/>
+            <button type="submit" class="btn">Share</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+         </form>
+      </div>
    </body>
    <footer class="container-fluid">
       <div id="footer-details" class="row">
@@ -120,38 +129,9 @@
             <p class="inline-block"></p>
          </div>
       </div>
-      <!-- The Modal -->
-      <div class="form-popup" id="myForm">
-         <form
-            name="contact-form"
-            class="form-container"
-            onsubmit="return sendMail(this);"
-            >
-            <h3>Tell A Friend <i class="far fa-laugh-wink"></i></h3>
-            <input type="text" placeholder="Friend's Email" id="email" name="email" required />
-            <input type="text" placeholder="Friend's Name" id="name" name="name" required />
-            <input
-               type="text"
-               value="https://soccerpredictorcalculator-m2.herokuapp.com/"
-               name="message"
-               />
-            <button type="submit" class="btn">Share</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">
-            Close
-            </button>
-         </form>
-      </div>
    </footer>
-   <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-      ></script>
-   <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-      ></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
    <script src="static/libraries/bootstrap/bootstrap.min.js"></script>
    <script src="static/js/script.js"></script>
 </html>
