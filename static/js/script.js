@@ -103,9 +103,17 @@ function check_Team_Selection() {
 }
 
 //click to call function
-document.getElementById("calculate").onclick = function () {
+document.getElementById("calculateButton").onclick = function () {
   CalculateChances();
 };
+
+document.getElementById("cleareButton").onclick = function () {
+  currentQuery = "";
+  var t1 = document.getElementById("oppTeam").value = currentQuery;
+  var t2 = document.getElementById("myTeam").value = currentQuery;
+ clearValue();
+};
+
 
 //open share form Modal
 document.getElementById("shareButton").onclick = function () {
@@ -163,8 +171,8 @@ $(document).ready(function() {
 
 function clearValue() {
     currentQuery = `<img src="/static/images/loader2.gif" alt="waiting..." />`;
-    var t1 = document.getElementById("my_Chances").innerHTML = currentQuery;
-  var t2 = document.getElementById("opp_Chances").innerHTML = currentQuery;
+    var chance_x = document.getElementById("my_Chances").innerHTML = currentQuery;
+  var chance_y = document.getElementById("opp_Chances").innerHTML = currentQuery;
  $("#circle-cover-bg").css("background-image", "url('/static/images/2.jpg')");
 
 }
