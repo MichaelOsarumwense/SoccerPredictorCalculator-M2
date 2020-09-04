@@ -26,7 +26,7 @@ function CalculateChances() {
     gamesWon: 3,
       gamesLost: 1,
       goalsScored: 4,
-      goalsReceived: 0,
+      goalsReceived: 1,
       url: "/static/images/Juventus.jpg",
     },
     {
@@ -58,32 +58,25 @@ function CalculateChances() {
     }
   });
 
+        var xChances = (((X.gamesWon/5 * (100))) + (((5 - X.gamesLost)/5 * (100))) + ((X.goalsScored/10 * (100))) + (((10 - X.goalsReceived)/10 * (100))))/4
+        var yChances = (((Y.gamesWon/5 * (100))) + (((5 - Y.gamesLost)/5 * (100))) + ((Y.goalsScored/10 * (100))) + (((10 - Y.goalsReceived)/10 * (100))))/4
+
   if (X.name === myTeam && Y.name === oppTeam) {
-    if (X.gamesWon > Y.gamesWon && X.gamesLost < Y.gamesLost) {
-        $("#my_Chances").text(`${X.name} is Most likely to Win!`);
-        $("#opp_Chances").text(`${Y.name} is Less likely to Win!`);
+    if (xChances > yChances) {
+        $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
+        $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
         $("#circle-cover-bg").css("background-image", `url(${X.url})`);
-    } else if (Y.gamesWon > X.gamesWon && Y.gamesLost < X.gamesLost) {
-        $("#opp_Chances").text(`${Y.name} is Most likely to Win!`);
-        $("#my_Chances").text(`${X.name} is Less likely to Win!`);
+    } 
+    else if (xChances < yChances) {
+        $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
+        $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
         $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
-    }else if (X.gamesWon >= Y.gamesWon && X.gamesLost <= Y.gamesLost) {
-        if(X.goalsScored >= Y.goalsScored || X.goalsReceived < Y.goalsReceived){
-        $("#my_Chances").text(`${X.name} is Most likely to Win!`);
-        $("#opp_Chances").text(`${Y.name} is Less likely to Win!`);
-        $("#circle-cover-bg").css("background-image", `url(${X.url})`);
-        }
-    } else if (Y.gamesWon >= X.gamesWon && Y.gamesLost <= X.gamesLost) {
-        if(Y.goalsScored >= X.goalsScored || Y.goalsReceived < X.goalsReceived){
-        $("#opp_Chances").text(`${Y.name} is Most likely to Win!`);
-        $("#my_Chances").text(`${X.name} is Less likely to Win!`);
-        $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
-        }
-    } else {
-      $("#my_Chances").text("It is a Tie");
-      $("#opp_Chances").text("It is a Tie");
-      $("#circle-cover-bg").css("background-image", "url('/static/images/draw.jpg')");
     }
+    else {
+        $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
+        $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
+        $("#circle-cover-bg").css("background-image", "url('/static/images/draw.jpg')");
+        }
   }
   if (myTeam === oppTeam && oppTeam !== "" && myTeam !== "") {
     $("#my_Chances").text("It is a Tie");
@@ -95,6 +88,7 @@ function CalculateChances() {
 function check_Team_Selection() {
   var oppTeam = document.getElementById("oppTeam").value;
   var myTeam = document.getElementById("myTeam").value;
+
   //Check to see if team selection is empty or incomplete
   if (oppTeam === "" && myTeam === "") {
     alert("Please select Teams");
