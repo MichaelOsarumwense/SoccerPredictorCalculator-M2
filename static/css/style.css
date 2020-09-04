@@ -173,7 +173,7 @@ select:hover {
 }
 /* general components styling*/
 button {
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: crimson;
   color: #fff;
   border: 1px solid;
@@ -182,6 +182,24 @@ button {
   outline: none;
   margin: auto;
 }
+
+ #calculateButton{
+     border-radius: 10px;
+ }
+
+ #cleareButton{
+border-radius: 10px;
+    background-color: #39ac7d;
+ }
+
+ #shareButton:hover{
+
+     color:rgb(223, 205, 205);
+ }
+
+  #cleareButton:hover, #calculateButton:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+  }
 
 /* sticky */
 .sticky {
