@@ -120,6 +120,13 @@ hr {
   margin: 50px 0;
   text-align: center;
   font-size: 280%;
+  margin-bottom: 10px;
+}
+
+#chance-info{
+margin-bottom: 0px;
+font-style: oblique;
+text-align: center;
 }
 
 #circle-container {
