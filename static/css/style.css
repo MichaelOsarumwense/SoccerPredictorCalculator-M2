@@ -1,6 +1,6 @@
 /* container */
 .landing-container {
-  height: 500px;
+  height: 600px;
   width: 100%;
   /*no-repeat bottom right fixed*/
   background: url("/static/images/1.jpg")
