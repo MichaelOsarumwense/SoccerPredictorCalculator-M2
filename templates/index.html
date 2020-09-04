@@ -101,11 +101,12 @@
          </div>
       </section>
       <div id="calculate" class="button-container-div">
-         <button id="calculateButton" style="border-radius: 25px;">Calculate</button>
+         <button id="calculateButton">Calculate</button>
+         <button class="inline" id="cleareButton">Clear</button>
       </div>
       <!-- The Modal -->
       <div class="form-popup" id="myForm">
-         <form name="contact-form" class="form-container" onsubmit="return sendMail(this);">
+         <form name="contact-form" id="contact-form" class="form-container" onsubmit="return sendMail(this);">
             <h3>Tell A Friend <i class="far fa-laugh-wink"></i></h3>
             <input type="text" placeholder="Friend's Name" id="name" name="name" required />
             <input type="text" placeholder="Friend's Email" id="email" name="email" required />
