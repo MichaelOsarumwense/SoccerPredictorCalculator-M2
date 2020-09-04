@@ -1,6 +1,6 @@
 /* container */
 .landing-container {
-  height: 700px;
+  height: 500px;
   width: 100%;
   /*no-repeat bottom right fixed*/
   background: url("/static/images/1.jpg")
@@ -121,6 +121,7 @@ hr {
   text-align: center;
   font-size: 280%;
 }
+
 #circle-container {
   width: 300px;
   height: 300px;
@@ -234,7 +235,7 @@ button {
   position: relative;
 }
 
-  #calculateButton {
+  #calculateButton, #shareButton {
 
 width: -webkit-fill-available;
 width: -moz-available;
@@ -267,13 +268,13 @@ h5{
   justify-content: center;
   position: relative;
 }
-  #calculateButton {
+  #calculateButton{
 
 width: -webkit-fill-available;
 width: -moz-available;
 width: fill-available;
 }
-
+}
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: #555;
@@ -295,7 +296,7 @@ width: fill-available;
   top: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
-  z-index: 1031;
+  z-index: 1030;
   color: #4c4343;
   
 }
