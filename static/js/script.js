@@ -113,6 +113,12 @@ document.getElementById("calculate").onclick = function () {
   CalculateChances();
 };
 
+//open share form Modal
+document.getElementById("shareButton").onclick = function () {
+ openForm();
+};
+
+
 function sendMail(contactForm) {
     emailjs.send("gmail", "milestone2", {
         "user_message": contactForm.message.value,      
