@@ -44,8 +44,8 @@
   </nav>
          </header>
       </div>
-      <div class="container-fluid landing-container"></div>
-      <section id="team-Infos">
+      <div onclick="closeForm()" class="container-fluid landing-container"></div>
+      <section onclick="closeForm()" id="team-Infos">
          <h2 id="question">Predict A Game!</h2>
          <p id="chance-info">Chances are calculated on the basis of Games-Won, Games-Lost, Goals-Scored & Goals-Recieved.</p>
          <div id="left-about">
@@ -107,8 +107,8 @@
       <div class="form-popup" id="myForm">
          <form name="contact-form" class="form-container" onsubmit="return sendMail(this);">
             <h3>Tell A Friend <i class="far fa-laugh-wink"></i></h3>
-            <input type="text" placeholder="Friend's Email" id="email" name="email" required />
             <input type="text" placeholder="Friend's Name" id="name" name="name" required />
+            <input type="text" placeholder="Friend's Email" id="email" name="email" required />
             <input type="text" value="https://soccerpredictorcalculator-m2.herokuapp.com/" name="message"/>
             <button type="submit" class="btn">Share</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>

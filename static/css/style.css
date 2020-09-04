@@ -226,7 +226,7 @@ button {
   }
 
    .landing-container {
-  height: 450px;
+  height: 400px;
   width: 100%;
   /*no-repeat bottom right fixed*/
   background: url("/static/images/3.jpg")
@@ -261,7 +261,7 @@ h5{
     width: auto;
   }
   .landing-container {
-  height: 450px;
+  height: 400px;
   width: 100%;
   /*no-repeat bottom right fixed*/
   background: url("/static/images/3.jpg") bottom right fixed;
