@@ -4,6 +4,11 @@ function CalculateChances() {
   var oppTeam = document.getElementById("oppTeam").value;
   var myTeam = document.getElementById("myTeam").value;
 
+  var trophy = function(name){return `<h4>${name} <i class="fas fa-trophy"></i></h4>`;}
+  var tie = function(message){return `<h4>${message} <i class="fas fa-american-sign-language-interpreting"></i></h4>`;}
+
+  const container = document.getElementById('winner');
+
   var Teams = [
     {
       name: "Barcelona",
@@ -66,22 +71,26 @@ function CalculateChances() {
         $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
         $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
         $("#circle-cover-bg").css("background-image", `url(${X.url})`);
+        container.innerHTML = trophy(X.name);
     } 
     else if (xChances < yChances) {
         $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
         $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
         $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
+        container.innerHTML = trophy(Y.name);
     }
     else {
         $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
         $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
         $("#circle-cover-bg").css("background-image", "url('/static/images/draw.jpg')");
+         container.innerHTML = tie("It's A Tie");
         }
   }
   if (myTeam === oppTeam && oppTeam !== "" && myTeam !== "") {
     $("#my_Chances").text("It is a Tie");
     $("#opp_Chances").text("It is a Tie");
     $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
+    container.innerHTML = tie("It's A Tie");
   }
 }
 //Calculate chances
@@ -91,13 +100,15 @@ function check_Team_Selection() {
 
   //Check to see if team selection is empty or incomplete
   if (oppTeam === "" && myTeam === "") {
-  $.BToasty("Warning:","Please select Teams","Team Selection Required","top_middle",true, 5000);
+toastr.info('Please Select Teams');
+
     return;
   } else if (
     (oppTeam !== "" && myTeam === "") ||
     (oppTeam === "" && myTeam !== "")
   ) {
-      $.BToasty("Warning:","You must select Teams for Both Own and Rival","Team Selection Required","top_middle",true, 5000);
+ toastr.warning('You must select Teams for Both Own and Rival');
+
     return;
   }
 }
@@ -113,7 +124,6 @@ document.getElementById("cleareButton").onclick = function () {
   var t2 = document.getElementById("myTeam").value = currentQuery;
  clearValue();
 };
-
 
 //open share form Modal
 document.getElementById("shareButton").onclick = function () {
@@ -132,13 +142,13 @@ function sendMail(contactForm) {
             console.log("SUCCESS", response);
               frm = document.getElementsByName('contact-form')[0]
             frm.reset();
-            return $.BToasty("Success:","Message Sent","Thanks for sharing.","top_right",true, 5000);
+            return  toastr.success('Message Sent: Thanks for sharing');
         },
         function(error) {
             console.log("FAILED", error);
               frm = document.getElementsByName('contact-form')[0]
             frm.reset();
-            return $.BToasty("Failed:","Message Not Sent","Please Try Again.","top_right",true, 5000);
+           return toastr.error('Message Not Sent: Please Try Again.');
         }
     );
     return false;  // To block from loading a new page
@@ -174,5 +184,6 @@ function clearValue() {
     var chance_x = document.getElementById("my_Chances").innerHTML = currentQuery;
   var chance_y = document.getElementById("opp_Chances").innerHTML = currentQuery;
  $("#circle-cover-bg").css("background-image", "url('/static/images/2.jpg')");
+  $("#winner").text("");
 
 }
