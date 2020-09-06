@@ -100,6 +100,13 @@ The link to the test automation repo used for this project can be found <a href=
 <li>Upon entering details, when user click share user should get an alert that tells the user if the share was a success or failure</li>
 </ol>
 </li>
+<li>Mobile Resolutions:
+<ol>
+<li>In a mobile resolution Centre Image should not be displayed.</li>
+<li>In a mobile resolution share app button should be hidden in a toggle menu button.</li>
+<li>On a mobile screen background image should contain and not cover and should repeat.</li>
+</ol>
+</li>
 </ul>
 <hr>
 
