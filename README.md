@@ -115,6 +115,7 @@ The link to the test automation repo used for this project can be found <a href=
 <li>Fixed bug with the business logic where chances were not being calculated if the selected teams had equal stats.</li>
 <li>Fixed a bug where images were not displaying across all pages due to moving the images folder into static directory.</li>
 <li>Fixed a bug where modal was not being displayed on click due to a missing css closing curly braces</li>
+<li>Fixed a bug where matches calculated with Paris was throwing a warning notification to select teams because the values for paris was empty</li>
 </ul>
 
 ## **Deployment**
