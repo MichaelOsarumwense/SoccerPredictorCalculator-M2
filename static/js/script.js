@@ -91,13 +91,13 @@ function check_Team_Selection() {
 
   //Check to see if team selection is empty or incomplete
   if (oppTeam === "" && myTeam === "") {
-    alert("Please select Teams");
+  $.BToasty("Warning:","Please select Teams","Team Selection Required","top_middle",true, 5000);
     return;
   } else if (
     (oppTeam !== "" && myTeam === "") ||
     (oppTeam === "" && myTeam !== "")
   ) {
-    alert("You must select Teams for Both Own and Rival");
+      $.BToasty("Warning:","You must select Teams for Both Own and Rival","Team Selection Required","top_middle",true, 5000);
     return;
   }
 }
@@ -132,13 +132,13 @@ function sendMail(contactForm) {
             console.log("SUCCESS", response);
               frm = document.getElementsByName('contact-form')[0]
             frm.reset();
-            return alert('Thanks for sharing.');
+            return $.BToasty("Success:","Message Sent","Thanks for sharing.","top_right",true, 5000);
         },
         function(error) {
             console.log("FAILED", error);
               frm = document.getElementsByName('contact-form')[0]
             frm.reset();
-            return alert('Unknown error please try again');
+            return $.BToasty("Failed:","Message Not Sent","Please Try Again.","top_right",true, 5000);
         }
     );
     return false;  // To block from loading a new page
