@@ -147,6 +147,12 @@ text-align: center;
   border-radius: 50%;
 }
 
+#winner{
+    text-align:center; 
+    margin-top:20px; 
+    margin-left:20px;
+}
+
 #opp_Chances{
     text-align: right;
      font-size: large;
