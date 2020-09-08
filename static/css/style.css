@@ -4,7 +4,7 @@
 	height: 600px;
 	width: 100%;
 	/*no-repeat bottom right fixed*/
-	background: url("/static/images/1.jpg") no-repeat bottom right fixed;
+	background: url("/static/images/1.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -342,11 +342,11 @@ button {
 		height: 400px;
 		width: 100%;
 		/*no-repeat bottom right fixed*/
-		background: url("/static/images/3.jpg") bottom right fixed;
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain;
+		background: url("/static/images/3.jpg")no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -365,7 +365,7 @@ button {
 
 /* Medium devices (landscape tablets, 768px and up) */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
 	#circle-container {
 		border-style: none;
 		width: auto;
@@ -374,11 +374,11 @@ button {
 		height: 400px;
 		width: 100%;
 		/*no-repeat bottom right fixed*/
-		background: url("/static/images/3.jpg") bottom right fixed;
-		-webkit-background-size: contain;
-		-moz-background-size: contain;
-		-o-background-size: contain;
-		background-size: contain;
+		background: url("/static/images/3.jpg")no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 		display: flex;
 		align-items: center;
 		justify-content: center;
