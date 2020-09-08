@@ -67,7 +67,7 @@ The user experience is simple and easy to navigate. Soccer Predictor calculator 
 Testing on Soccer Predictor Calculator Website was carried out **manually** and by Atutomation using **Cypress**. The test approach was to test every user story individually by creating 
 user journies and scenarios required to navigate through the entire site. While testing, a few bugs were found and fixed and these are are all listed below. **Devtool** and **light house** was also used to debug and test the application.
 
-The link to the test automation repo used for this project can be found <a href="https://soccerpredictorcalculator-m2.herokuapp.com/" target="_blank">here.</a>
+The link to the test automation repo used for this project can be found <a href="https://github.com/MichaelOsarumwense/Cypress-e2e-SoccerPredictor-m2.git" target="_blank">here.</a>
 
 ### **Home Page**
 <ul>
