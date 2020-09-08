@@ -1,13 +1,17 @@
 function CalculateChances() {
   check_Team_Selection();
-     clearValue();
+  clearValue();
   var oppTeam = document.getElementById("oppTeam").value;
   var myTeam = document.getElementById("myTeam").value;
 
-  var trophy = function(name){return `<h4>${name} <i class="fas fa-trophy"></i></h4>`;}
-  var tie = function(message){return `<h4>${message} <i class="fas fa-american-sign-language-interpreting"></i></h4>`;}
+  var trophy = function (name) {
+    return `<h4>${name} <i class="fas fa-trophy"></i></h4>`;
+  };
+  var tie = function (message) {
+    return `<h4>${message} <i class="fas fa-american-sign-language-interpreting"></i></h4>`;
+  };
 
-  const container = document.getElementById('winner');
+  const container = document.getElementById("winner");
 
   var Teams = [
     {
@@ -28,7 +32,7 @@ function CalculateChances() {
     },
     {
       name: "Juventus",
-    gamesWon: 3,
+      gamesWon: 3,
       gamesLost: 1,
       goalsScored: 4,
       goalsReceived: 1,
@@ -36,7 +40,7 @@ function CalculateChances() {
     },
     {
       name: "Liverpool",
-    gamesWon: 2,
+      gamesWon: 2,
       gamesLost: 2,
       goalsScored: 2,
       goalsReceived: 1,
@@ -44,7 +48,7 @@ function CalculateChances() {
     },
     {
       name: "Paris",
-    gamesWon: 3,
+      gamesWon: 3,
       gamesLost: 1,
       goalsScored: 3,
       goalsReceived: 0,
@@ -52,7 +56,7 @@ function CalculateChances() {
     },
   ];
 
-  const X = Teams.find((x) => { 
+  const X = Teams.find((x) => {
     if (x.name == myTeam) {
       return x;
     }
@@ -63,28 +67,51 @@ function CalculateChances() {
     }
   });
 
-        var xChances = (((X.gamesWon/5 * (100))) + (((5 - X.gamesLost)/5 * (100))) + ((X.goalsScored/10 * (100))) + (((10 - X.goalsReceived)/10 * (100))))/4
-        var yChances = (((Y.gamesWon/5 * (100))) + (((5 - Y.gamesLost)/5 * (100))) + ((Y.goalsScored/10 * (100))) + (((10 - Y.goalsReceived)/10 * (100))))/4
+  var xChances =
+    ((X.gamesWon / 5) * 100 +
+      ((5 - X.gamesLost) / 5) * 100 +
+      (X.goalsScored / 10) * 100 +
+      ((10 - X.goalsReceived) / 10) * 100) /
+    4;
+  var yChances =
+    ((Y.gamesWon / 5) * 100 +
+      ((5 - Y.gamesLost) / 5) * 100 +
+      (Y.goalsScored / 10) * 100 +
+      ((10 - Y.goalsReceived) / 10) * 100) /
+    4;
 
   if (X.name === myTeam && Y.name === oppTeam) {
     if (xChances > yChances) {
-        $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
-        $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
-        $("#circle-cover-bg").css("background-image", `url(${X.url})`);
-        container.innerHTML = trophy(X.name);
-    } 
-    else if (xChances < yChances) {
-        $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
-        $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
-        $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
-        container.innerHTML = trophy(Y.name);
+      $("#my_Chances").text(
+        `${X.name} has a ${xChances.toFixed(2)}% winning chance`
+      );
+      $("#opp_Chances").text(
+        `${Y.name} has a ${yChances.toFixed(2)}% winning chance`
+      );
+      $("#circle-cover-bg").css("background-image", `url(${X.url})`);
+      container.innerHTML = trophy(X.name);
+    } else if (xChances < yChances) {
+      $("#opp_Chances").text(
+        `${Y.name} has a ${yChances.toFixed(2)}% winning chance`
+      );
+      $("#my_Chances").text(
+        `${X.name} has a ${xChances.toFixed(2)}% winning chance`
+      );
+      $("#circle-cover-bg").css("background-image", `url(${Y.url})`);
+      container.innerHTML = trophy(Y.name);
+    } else {
+      $("#my_Chances").text(
+        `${X.name} has a ${xChances.toFixed(2)}% winning chance`
+      );
+      $("#opp_Chances").text(
+        `${Y.name} has a ${yChances.toFixed(2)}% winning chance`
+      );
+      $("#circle-cover-bg").css(
+        "background-image",
+        "url('/static/images/draw.jpg')"
+      );
+      container.innerHTML = tie("It's A Tie");
     }
-    else {
-        $("#my_Chances").text(`${X.name} has a ${xChances.toFixed(2)}% winning chance`);
-        $("#opp_Chances").text(`${Y.name} has a ${yChances.toFixed(2)}% winning chance`);
-        $("#circle-cover-bg").css("background-image", "url('/static/images/draw.jpg')");
-         container.innerHTML = tie("It's A Tie");
-        }
   }
   if (myTeam === oppTeam && oppTeam !== "" && myTeam !== "") {
     $("#my_Chances").text("It is a Tie");
@@ -100,14 +127,14 @@ function check_Team_Selection() {
 
   //Check to see if team selection is empty or incomplete
   if (oppTeam === "" && myTeam === "") {
-toastr.info('Please Select Teams');
+    toastr.info("Please Select Teams");
 
     return;
   } else if (
     (oppTeam !== "" && myTeam === "") ||
     (oppTeam === "" && myTeam !== "")
   ) {
- toastr.warning('You must select Teams for Both Own and Rival');
+    toastr.warning("You must select Teams for Both Own and Rival");
 
     return;
   }
@@ -120,38 +147,38 @@ document.getElementById("calculateButton").onclick = function () {
 
 document.getElementById("cleareButton").onclick = function () {
   currentQuery = "";
-  var t1 = document.getElementById("oppTeam").value = currentQuery;
-  var t2 = document.getElementById("myTeam").value = currentQuery;
- clearValue();
+  var t1 = (document.getElementById("oppTeam").value = currentQuery);
+  var t2 = (document.getElementById("myTeam").value = currentQuery);
+  clearValue();
 };
 
 //open share form Modal
 document.getElementById("shareButton").onclick = function () {
- openForm();
+  openForm();
 };
 
-
 function sendMail(contactForm) {
-    emailjs.send("gmail", "milestone2", {
-        "user_message": contactForm.message.value,      
-        "user_name": contactForm.name.value,
-        "user_email": contactForm.email.value
+  emailjs
+    .send("gmail", "milestone2", {
+      user_message: contactForm.message.value,
+      user_name: contactForm.name.value,
+      user_email: contactForm.email.value,
     })
     .then(
-        function(response) {
-            console.log("SUCCESS", response);
-              frm = document.getElementsByName('contact-form')[0]
-            frm.reset();
-            return  toastr.success('Message Sent: Thanks for sharing');
-        },
-        function(error) {
-            console.log("FAILED", error);
-              frm = document.getElementsByName('contact-form')[0]
-            frm.reset();
-           return toastr.error('Message Not Sent: Please Try Again.');
-        }
+      function (response) {
+        console.log("SUCCESS", response);
+        frm = document.getElementsByName("contact-form")[0];
+        frm.reset();
+        return toastr.success("Message Sent: Thanks for sharing");
+      },
+      function (error) {
+        console.log("FAILED", error);
+        frm = document.getElementsByName("contact-form")[0];
+        frm.reset();
+        return toastr.error("Message Not Sent: Please Try Again.");
+      }
     );
-    return false;  // To block from loading a new page
+  return false; // To block from loading a new page
 }
 
 function openForm() {
@@ -163,27 +190,30 @@ function closeForm() {
 }
 
 var header = document.getElementById("nav-bar"),
-    sticky = header.offsetTop;
+  sticky = header.offsetTop;
 
 function myFunction() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
 
 window.onscroll = myFunction;
 
-$(document).ready(function() {
-    myFunction();
+$(document).ready(function () {
+  myFunction();
 });
 
 function clearValue() {
-    currentQuery = `<img src="/static/images/loader2.gif" alt="waiting..." />`;
-    var chance_x = document.getElementById("my_Chances").innerHTML = currentQuery;
-  var chance_y = document.getElementById("opp_Chances").innerHTML = currentQuery;
- $("#circle-cover-bg").css("background-image", "url('/static/images/2.jpg')");
+  currentQuery = `<img src="/static/images/loader2.gif" alt="waiting..." />`;
+  var chance_x = (document.getElementById(
+    "my_Chances"
+  ).innerHTML = currentQuery);
+  var chance_y = (document.getElementById(
+    "opp_Chances"
+  ).innerHTML = currentQuery);
+  $("#circle-cover-bg").css("background-image", "url('/static/images/2.jpg')");
   $("#winner").text("");
-
 }
