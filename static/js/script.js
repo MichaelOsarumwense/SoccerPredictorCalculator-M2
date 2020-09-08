@@ -1,19 +1,19 @@
-function CalculateChances() {
-  check_Team_Selection();
+function calculateChances() {
+  checkTeamSelection();
   clearValue();
-  var oppTeam = document.getElementById("oppTeam").value;
-  var myTeam = document.getElementById("myTeam").value;
+  let oppTeam = document.getElementById("oppTeam").value;
+  let myTeam = document.getElementById("myTeam").value;
 
-  var trophy = function (name) {
+  let trophy = function (name) {
     return `<h4>${name} <i class="fas fa-trophy"></i></h4>`;
   };
-  var tie = function (message) {
+  let tie = function (message) {
     return `<h4>${message} <i class="fas fa-american-sign-language-interpreting"></i></h4>`;
   };
 
-  const container = document.getElementById("winner");
+  let container = document.getElementById("winner");
 
-  var Teams = [
+  const teams = [
     {
       name: "Barcelona",
       gamesWon: 3,
@@ -56,24 +56,24 @@ function CalculateChances() {
     },
   ];
 
-  const X = Teams.find((x) => {
+  const X = teams.find((x) => {
     if (x.name == myTeam) {
       return x;
     }
   });
-  const Y = Teams.find((y) => {
+  const Y = teams.find((y) => {
     if (y.name == oppTeam) {
       return y;
     }
   });
 
-  var xChances =
+  let xChances =
     ((X.gamesWon / 5) * 100 +
       ((5 - X.gamesLost) / 5) * 100 +
       (X.goalsScored / 10) * 100 +
       ((10 - X.goalsReceived) / 10) * 100) /
     4;
-  var yChances =
+  let yChances =
     ((Y.gamesWon / 5) * 100 +
       ((5 - Y.gamesLost) / 5) * 100 +
       (Y.goalsScored / 10) * 100 +
@@ -121,9 +121,9 @@ function CalculateChances() {
   }
 }
 //Calculate chances
-function check_Team_Selection() {
-  var oppTeam = document.getElementById("oppTeam").value;
-  var myTeam = document.getElementById("myTeam").value;
+function checkTeamSelection() {
+  let oppTeam = document.getElementById("oppTeam").value;
+  let myTeam = document.getElementById("myTeam").value;
 
   //Check to see if team selection is empty or incomplete
   if (oppTeam === "" && myTeam === "") {
@@ -140,23 +140,6 @@ function check_Team_Selection() {
   }
 }
 
-//click to call function
-document.getElementById("calculateButton").onclick = function () {
-  CalculateChances();
-};
-
-document.getElementById("cleareButton").onclick = function () {
-  currentQuery = "";
-  var t1 = (document.getElementById("oppTeam").value = currentQuery);
-  var t2 = (document.getElementById("myTeam").value = currentQuery);
-  clearValue();
-};
-
-//open share form Modal
-document.getElementById("shareButton").onclick = function () {
-  openForm();
-};
-
 function sendMail(contactForm) {
   emailjs
     .send("gmail", "milestone2", {
@@ -167,13 +150,13 @@ function sendMail(contactForm) {
     .then(
       function (response) {
         console.log("SUCCESS", response);
-        frm = document.getElementsByName("contact-form")[0];
+        let frm = document.getElementsByName("contact-form")[0];
         frm.reset();
         return toastr.success("Message Sent: Thanks for sharing");
       },
       function (error) {
         console.log("FAILED", error);
-        frm = document.getElementsByName("contact-form")[0];
+        let frm = document.getElementsByName("contact-form")[0];
         frm.reset();
         return toastr.error("Message Not Sent: Please Try Again.");
       }
@@ -189,10 +172,10 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 
-var header = document.getElementById("nav-bar"),
+let header = document.getElementById("nav-bar"),
   sticky = header.offsetTop;
 
-function myFunction() {
+function onScrollHandler() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
@@ -200,18 +183,35 @@ function myFunction() {
   }
 }
 
-window.onscroll = myFunction;
+window.onscroll = onScrollHandler;
 
 $(document).ready(function () {
-  myFunction();
+  //click to call function
+  document.getElementById("calculateButton").onclick = function () {
+    calculateChances();
+  };
+
+  document.getElementById("cleareButton").onclick = function () {
+    currentQuery = "";
+    let t1 = (document.getElementById("oppTeam").value = currentQuery);
+    let t2 = (document.getElementById("myTeam").value = currentQuery);
+    clearValue();
+  };
+
+  //open share form Modal
+  document.getElementById("shareButton").onclick = function () {
+    openForm();
+  };
+
+  onScrollHandler();
 });
 
 function clearValue() {
   currentQuery = `<img src="/static/images/loader2.gif" alt="waiting..." />`;
-  var chance_x = (document.getElementById(
+  let chance_x = (document.getElementById(
     "my_Chances"
   ).innerHTML = currentQuery);
-  var chance_y = (document.getElementById(
+  let chance_y = (document.getElementById(
     "opp_Chances"
   ).innerHTML = currentQuery);
   $("#circle-cover-bg").css("background-image", "url('/static/images/2.jpg')");
