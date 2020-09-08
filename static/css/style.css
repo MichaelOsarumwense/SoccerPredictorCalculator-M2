@@ -353,7 +353,7 @@ button {
 		position: relative;
 	}
 	#calculateButton,
-	#shareButton {
+	#shareButton, #cleareButton {
 		width: -webkit-fill-available;
 		width: -moz-available;
 	}
