@@ -152,12 +152,15 @@ function sendMail(contactForm) {
         console.log("SUCCESS", response);
         let frm = document.getElementsByName("contact-form")[0];
         frm.reset();
+
+        $("#share").buttonLoader("stop");
         return toastr.success("Message Sent: Thanks for sharing");
       },
       function (error) {
         console.log("FAILED", error);
         let frm = document.getElementsByName("contact-form")[0];
         frm.reset();
+        $("#share").buttonLoader("stop");
         return toastr.error("Message Not Sent: Please Try Again.");
       }
     );
@@ -201,6 +204,17 @@ $(document).ready(function () {
   //open share form Modal
   document.getElementById("shareButton").onclick = function () {
     openForm();
+  };
+
+  //start loader on click share
+  document.getElementById("share").onclick = function () {
+    let friendsName = document.getElementById("name").value;
+    let friendsEmail = document.getElementById("email").value;
+    let btn = $(this);
+    if (friendsName && friendsEmail !== "") {
+      $(btn).buttonLoader("start");
+      name;
+    }
   };
 
   onScrollHandler();
