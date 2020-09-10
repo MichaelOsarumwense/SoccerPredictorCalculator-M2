@@ -29,9 +29,9 @@ The user experience is simple and easy to navigate. Soccer Predictor calculator 
 
 ## **Mocks**
 ### Web
-**As a basic layout <a href="WireFrame/Web-Mockup-m2.png" target="_blank">here is a link </a> to the web wireFrame and Mock up used in creating Soccer Predictor Calculator.**
+**As a basic layout <a href="WireFrame/web-mock.PNG" target="_blank">here is a link </a> to the web wireFrame and Mock up used in creating Soccer Predictor Calculator.**
 ### Mobile
-**For the mobile devices, <a href="WireFrame/mobile-mockup.PNG" target="_blank">here is a link </a> to the wireFrame and Mock up used in creating Soccer Predictor Calculator.**
+**For the mobile devices, <a href="WireFrame/mobile-mock.PNG" target="_blank">here is a link </a> to the wireFrame and Mock up used in creating Soccer Predictor Calculator.**
 
 ## **Features**
 ### Existing Features
@@ -40,7 +40,7 @@ The user experience is simple and easy to navigate. Soccer Predictor calculator 
 <li>Center Image: The Center image helps visualize the outcome by displaying the image or logo of the winning team</li>
 <li>Loader gif: The loader image is displayed on the result field of each team until a calculation takes place</li>
 <li>Share App: The Application has a share button that allows user share the application with friends.</li>
-<li>Clear Option: The Application has a clear button that allows users conveiniently clear each selected or result field in one click.</li>
+<li>Clear Option: The Application has a clear button that allows users conveiniently clear input fields as well as calculated results in one click.</li>
 <li>Alert: The Application has an alert feature that gives users meaningful feedback on actions being performed.</li>
 </ul>
 
@@ -78,7 +78,7 @@ The link to the test automation repo used for this project can be found <a href=
 <li>Chances for own and rival team should be displayed on **Your Chances** and **Rival Chances** fields upon clicking caluclate.</li>
 <li>Chances for own and rival team displayed should contain percentage chances such as <strong><em>Bayernmunich has a 87.50% winning chance</em></strong></li>
 <li>If the same team is selected on both sides then chances displayed should read "It is a tie"</li>
-<li>If user click on calculate without own or rival team then user gets an alert saying <strong><em>plese select teams</strong></em></li>
+<li>If user click on calculate without selecting own or rival team then user gets an alert saying <strong><em>plese select teams</strong></em></li>
 <li>If user click on calculate and selects just one team either own or rival team then user gets an alert saying <strong><em>You must select Teams for Both Own and Rival</em></strong></li>
 </ol> 
 </li>
@@ -89,7 +89,7 @@ The link to the test automation repo used for this project can be found <a href=
 <li>The Centre image changes to teams logo if the same teams are selected is slected on both own and rival teams.</li>
 </ol>
 </li>
-<li>Share App: On the header navigate to share app and clcik on button, fill in name and email and click send</li>
+<li>Share App: On the header navigate to share app and click on button, fill in name and email and click send</li>
 <li>Manually verify email is recieved: Naviage to the email addressed sent and verify email was recieved from Soccer Predictor Calculator (milestone2project@gmail.com)</li>
 <li>Responsiveness: UX is responsive on small and medium devices like mobile phones and tablets.</li>
 <li>Modal: 
@@ -104,7 +104,8 @@ The link to the test automation repo used for this project can be found <a href=
 <ol>
 <li>In a mobile resolution Centre Image should not be displayed.</li>
 <li>In a mobile resolution share app button should be hidden in a toggle menu button.</li>
-<li>On a mobile screen background image should contain and not cover and should repeat.</li>
+<li>On a mobile screen background image should cover and not repeat.</li>
+<li>On a mobile screen there should be no centre display of winner, just results displayed on the right andleft fields.</li>
 </ol>
 </li>
 </ul>
@@ -112,7 +113,7 @@ The link to the test automation repo used for this project can be found <a href=
 
 ### **Bugs**
 <ul>
-<li>Fixed bug with the business logic where chances were not being calculated if the selected teams had equal stats.</li>
+<li>Fixed bug with the business logic where chances were not being calculated if the selected teams had equal statistics.</li>
 <li>Fixed a bug where images were not displaying across all pages due to moving the images folder into static directory.</li>
 <li>Fixed a bug where modal was not being displayed on click due to a missing css closing curly braces</li>
 <li>Fixed a bug where matches calculated with Paris was throwing a warning notification to select teams because the values for paris was empty</li>
@@ -122,8 +123,9 @@ The link to the test automation repo used for this project can be found <a href=
 Soccer Predictor Calculator is deployed to Heroku and hosted on Heroku. The deployed branch is the master branch and can be found below: 
 <ul>
 <li>Deployed git Branch: <a href="https://github.com/MichaelOsarumwense/SoccerPredictorCalculator-M2.git">Github Repo</a> </li>
+<li>To run the code locally, clone the repo with the above link, open project with gitpod and in the terminal run the following command: <strong><em>python3 run.py</strong></em></li>
 </ul>
-To run the code locally, clone the repo with the above link, open the project folder with Visual studio code, right click on the index.html file and select run with live server.
+
 
 ## **Credit**
 ### **Content**
