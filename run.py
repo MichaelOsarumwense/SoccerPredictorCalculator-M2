@@ -17,4 +17,4 @@ if __name__ == '__main__':
     host = os.environ.get('IP', default_ip)
     port = int(os.environ.get('PORT', default_port))
 
-    app.run(host=host, port=port, debug=True)
+    app.run(host=host, port=port, debug=False)
