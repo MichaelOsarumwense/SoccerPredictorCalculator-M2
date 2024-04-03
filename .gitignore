@@ -1,3 +1,5 @@
 .vercel
 myenv
 secret.js
+node_modules/
+cypress/videos/
