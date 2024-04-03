@@ -137,12 +137,12 @@ function checkTeamSelection() {
     return;
   }
 }
+
+let frm = document.getElementsByName('contact-form')[0];
 // send email function using email.js Api
 function sendMail(contactForm) {
-  let frm = document.getElementsByName('contact-form')[0];
-
   emailjs
-    .send('service_jc6wj58', 'soccerpredictorapp', {
+    .send('default_service', 'soccerpredictorapp', {
       user_message: contactForm.message.value,
       user_name: contactForm.name.value,
       user_email: contactForm.email.value,
@@ -154,15 +154,13 @@ function sendMail(contactForm) {
         frm.reset();
 
         $('#share').buttonLoader('stop');
-        toastr.success('Message Sent: Thanks for sharing');
         closeForm();
+        return toastr.success('Message Sent: Thanks for sharing');
       },
       function (error) {
         console.log('FAILED', error);
-        frm.reset();
         $('#share').buttonLoader('stop');
-        toastr.error('Message Not Sent: Please Try Again.');
-        closeForm();
+        return toastr.error('Message Not Sent: Please Try Again.');
       }
     );
 
