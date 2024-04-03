@@ -14,6 +14,8 @@ jobs:
         run: |
           pip install pipenv
           pipenv install --deploy --system
+      - name: Install Cypress dependencies
+        run: npm install cypress
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
